@@ -1,2 +1,2 @@
-# Vadzim-Zavadski1
+# Vadzim-Zavadski
 First project
