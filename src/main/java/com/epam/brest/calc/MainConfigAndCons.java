@@ -1,4 +1,4 @@
-package com.epam.brest;
+package com.epam.brest.calc;
 
 import com.epam.brest.calc.CalcImpl;
 
