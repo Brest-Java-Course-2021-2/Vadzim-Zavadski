@@ -1,32 +1,27 @@
 package com.epam.brest;
 
-import com.epam.brest.calc.CalcImpl;
+import com.epam.brest.model.ReadData;
+import com.epam.brest.model.Status;
+import com.epam.brest.model.StatusType;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
 
-        BigDecimal weight, pricePerKg, length, pricePerKm;
+    public static void main(String[] arg) {
+        //result = weight*pricePerKg + km*pricePerKm;
+
+        //TODO read from file
+        //pricePerKg = getValueFromCon(scanner, "Enter pricePerKg:");
+        //pricePerKm = getValueFromCon(scanner, "Enter pricePerKm:");
 
         try (Scanner scanner = new Scanner(System.in)) {
-//            do {
-            weight = getValueFromCon(scanner, "Enter weight:");
-            pricePerKg = getValueFromCon(scanner, "Enter pricePerKg:");
-            length = getValueFromCon(scanner, "Enter length:");
-            pricePerKm = getValueFromCon(scanner, "Enter pricePerKm:");
-            BigDecimal result = new CalcImpl().handle(weight, pricePerKg, length, pricePerKm);
-            System.out.println("Result: " + result);
-            System.out.println("enter 'q' for exit or 'c' to continue: ");
-//            } while (!scanner.hasNext("q"));
+            Status currentStatus = new ReadData(scanner);
+            while (currentStatus.getType() != StatusType.EXIT) {
+                System.out.println("current type: " + currentStatus.getType());
+                currentStatus = currentStatus.handle();
+            }
         }
     }
 
-    private static BigDecimal getValueFromCon(Scanner scanner, String outputMessage) {
-        BigDecimal enteredValue;
-        System.out.print(outputMessage);
-        enteredValue = scanner.nextBigDecimal();
-        return enteredValue;
-    }
 }
