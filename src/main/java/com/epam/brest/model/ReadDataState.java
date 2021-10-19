@@ -20,12 +20,12 @@ public class ReadData implements Status {
             System.out.println(messages.get(userData.size()));
             String inputValue = scanner.next();
             if (inputValue.equalsIgnoreCase("q")) {
-                return new Exit();
+                return new ExitState();
             } else if (isCorrectValue(inputValue)) {
                 userData.add(new BigDecimal(inputValue));
             }
         } else {
-            return new Calc(scanner);
+            return new CalcState(scanner);
         }
         return this;
     }
