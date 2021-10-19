@@ -22,7 +22,7 @@ The list displays the following columns:
 * Name - the name of the team; 
 * Number of players.
 
-## 1.2 Adding teams
+## 1.2 Adding team
 This program mode is designed to add a new team in list.
 
   Main scenario:
@@ -43,7 +43,54 @@ Cancellation scenario:
 ![Picture 1.2](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/2.png)
 Picture 1.2 Team adding
 
+When adding a team, the following details are entered:
+  * Team - Name of team.
+## 1.3 Editing team
+This program mode is designed to edit a team in list.
 
+  Main scenario:
+  * the user is in the teams list view mode and clicks the "Edit" icon;
+  * the form for editing a team is displayed;
+  * the user idits data and clicks the "Save" button;
+  * if the data was entered incorrectly, then the warning about incorrect data is displayed;
+  * if the data was correct, then the team will be edited to the database;
+  * if an error occurred while saving data, an error message is displayed: "Error saving data";
+  * if the team was added successfully, the form for viewing the list of teams with updated data would be open. 
 
+Cancellation scenario:
+  * the user is in teams list view mode and clicks the "Edit" icon;
+  * the form for editing a team is displayed;
+  * the user enters data and clicks the "Cancel" button;
+  * data is not saved to the database and form for viewing the list of teams is opening with updated data.<br />
+ 
+![Picture 1.3](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/3.png)
+Picture 1.3 Team editing
+
+When editing a team, the following details are entered:
+  * Team - Name of team.
+
+## 1.4 Deleting team
+This program mode is designed to edit a team in list.
+
+  Main scenario:
+  * the user is in the teams list view mode and clicks the "Delete" icon;
+  * checking for the possibility of deleting team, for example, are there any players on this team?;
+  * if there are players in the team, then a message is displayed: "cannot be deleted";
+  * if the command can be deleted,the confirmation dialog for deleting is displayed "Delete team "Name of team"?";
+  * the user clicks the "Yes" button;
+  * the team is deleting in the database;
+  * if an error occurred while deleting data, an error message is displayed "Error data deletion";
+  * if the team has been deleted successfully, the form for viewing the list of teams with updated data would be open.
+
+Cancellation scenario:
+  * the user is in the teams list view mode and clicks the "Delete" icon;
+  * the confirmation dialog for deleting is displayed "Delete team "Name of team"?";
+  * the user clicks the "No" button;
+  * form for viewing the list of teams is opening with updated data.<br />
+ 
+![Picture 1.4](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/4.png)
+Picture 1.4 Team deleting
+
+***
 
 
