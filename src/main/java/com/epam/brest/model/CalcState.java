@@ -1,28 +1,35 @@
 package com.epam.brest.model;
 
+import com.epam.brest.calc.CalcImpl;
+import com.epam.brest.selector.PriceSelector;
+
 import java.math.BigDecimal;
+import java.util.Map;
 import java.util.Scanner;
 
 import static com.epam.brest.model.StatusType.CALC;
 
-public class Calc implements Status {
+public class CalcState extends AbstractStatus {
 
-    Scanner scanner;
-
-    public Calc(Scanner scanner) {
+    public CalcState(Scanner scanner, Map<Integer, BigDecimal> pricePerKgMap, Map<Integer, BigDecimal> pricePerKmMap) {
         this.scanner = scanner;
+        this.pricePerKgMap = pricePerKgMap;
+        this.pricePerKmMap = pricePerKmMap;
     }
 
     @Override
     public Status handle() {
 
         try {
-            System.out.println("Result: " + userData.get(0).multiply(BigDecimal.valueOf(1)).add(userData.get(1).multiply(BigDecimal.valueOf(1))));
+            BigDecimal pricePerKg = new PriceSelector().selectPriceValue(pricePerKgMap, userData.get(0));
+            BigDecimal pricePerKm = new PriceSelector().selectPriceValue(pricePerKmMap, userData.get(1));
+            BigDecimal result = new CalcImpl().handle(pricePerKg, userData.get(0), pricePerKm, userData.get(1));
+            System.out.println("Result: " + result);
         } finally {
             userData.clear();
         }
 
-        return new ReadData(scanner);
+        return new ReadDataState(scanner, pricePerKgMap, pricePerKmMap);
     }
 
     @Override
