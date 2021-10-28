@@ -16,6 +16,7 @@ Main scenario:
 
 
 ![Picture 1.1](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/1.png)
+
 Picture 1.1 Viewing the list of teams
 
 The list displays the following columns:
@@ -41,6 +42,7 @@ Cancellation scenario:
   * data is not saved to the database and form for viewing the list of teams is opening with updated data.<br />
  
 ![Picture 1.2](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/2.png)
+
 Picture 1.2 Team adding
 
 When adding a team, the following details are entered:
@@ -64,6 +66,7 @@ Cancellation scenario:
   * data is not saved to the database and form for viewing the list of teams is opening with updated data.<br />
  
 ![Picture 1.3](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/3.png)
+
 Picture 1.3 Team editing
 
 When editing a team, the following details are entered:
@@ -89,6 +92,7 @@ Cancellation scenario:
   * form for viewing the list of teams is opening with updated data.<br />
  
 ![Picture 1.4](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/4.png)
+
 Picture 1.4 Team deleting
 
 ***
