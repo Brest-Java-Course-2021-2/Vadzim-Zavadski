@@ -169,9 +169,9 @@ Cancellation scenario:
   * the user enters data and clicks the "Cancel" button;
   * data is not saved to the database and form for viewing the list of players is opening with updated data.<br />
 
-![Picture 2.3](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/3.png)
+![Picture 2.3](https://github.com/Brest-Java-Course-2021-2/Vadzim-Zavadski/blob/main/documentation/pictures/7.png)
 
-Picture 1.3 Player editing
+Picture 2.3 Player editing
 
 When adding a team, the following details are entered:
 * Name - the name of the player; 
